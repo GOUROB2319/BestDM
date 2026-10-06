@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/qt/qml/bestdm">
+        <file>main.qml</file>
+    </qresource>
+    <qresource prefix="/assets">
+        <file>assets/Glossy 3D Download App Icon.png</file>
+    </qresource>
+</RCC>
