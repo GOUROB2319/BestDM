@@ -2,5 +2,5 @@
   <Configurations>
     <Platform Name="x64" />
   </Configurations>
-  <Project Path="BestDM/BestDM.vcxproj" />
+  <Project Path="BestDM/BestDM.vcxproj" Id="4906d2a7-b52d-49f3-b30a-3e02ad54a1d9" />
 </Solution>

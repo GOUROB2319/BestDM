@@ -17,6 +17,8 @@ qt_add_executable(BestDM
     BestDM/persistencerepository.h
     BestDM/downloadtask.cpp
     BestDM/downloadtask.h
+    BestDM/downloadqueue.cpp
+    BestDM/downloadqueue.h
 )
 qt_add_resources(BestDM bestdm_qml
     PREFIX "/qt/qml/bestdm"
@@ -30,3 +32,14 @@ qt_add_resources(BestDM bestdm_assets
 )
 target_link_libraries(BestDM PRIVATE Qt6::Quick Qt6::Network Qt6::Sql)
 set_target_properties(BestDM PROPERTIES WIN32_EXECUTABLE TRUE)
+
+if(WIN32)
+    get_target_property(BESTDM_QMAKE Qt6::qmake IMPORTED_LOCATION)
+    get_filename_component(BESTDM_QT_BIN "${BESTDM_QMAKE}" DIRECTORY)
+    find_program(BESTDM_WINDEPLOYQT windeployqt HINTS "${BESTDM_QT_BIN}" REQUIRED)
+    add_custom_command(TARGET BestDM POST_BUILD
+        COMMAND "${BESTDM_WINDEPLOYQT}" --dir "$<TARGET_FILE_DIR:BestDM>"
+                --qmldir "${CMAKE_CURRENT_SOURCE_DIR}/BestDM" --no-translations
+                --no-system-d3d-compiler --no-opengl-sw "$<TARGET_FILE:BestDM>"
+        COMMENT "Deploying required Qt runtime libraries and QML imports for BestDM")
+endif()
