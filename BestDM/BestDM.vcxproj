@@ -38,13 +38,13 @@
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
     <QtInstall>6.12.0_msvc2022_64</QtInstall>
-    <QtModules>quick;network;sql</QtModules>
+    <QtModules>quick;network;sql;widgets;quickcontrols2;quickdialogs2</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
 <QtQMLDebugEnable>true</QtQMLDebugEnable>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
     <QtInstall>6.12.0_msvc2022_64</QtInstall>
-    <QtModules>quick;network;sql</QtModules>
+    <QtModules>quick;network;sql;widgets;quickcontrols2;quickdialogs2</QtModules>
     <QtBuildConfig>release</QtBuildConfig>
   </PropertyGroup>
   <Target Name="QtMsBuildNotFound"
@@ -80,6 +80,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
@@ -96,20 +97,42 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>Advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp"/>
+    <ClCompile Include="applicationprotocol.cpp"/>
+    <ClCompile Include="singleinstancecoordinator.cpp"/>
     <ClCompile Include="downloadmanager.cpp"/>
+    <ClCompile Include="downloadlistproxy.cpp"/>
+    <ClCompile Include="diagnosticlogger.cpp"/>
+    <ClCompile Include="categoryrules.cpp"/>
+    <ClCompile Include="securecredentialstore.cpp"/>
+    <ClCompile Include="traycontroller.cpp"/>
+    <ClCompile Include="schedulewindow.cpp"/>
+    <ClCompile Include="bandwidthlimiter.cpp"/>
     <ClCompile Include="persistencerepository.cpp"/>
     <ClCompile Include="downloadtask.cpp"/>
+    <ClCompile Include="segmenteddownloader.cpp"/>
     <ClCompile Include="downloadqueue.cpp"/>
     <QtMoc Include="downloadmanager.h"/>
+    <QtMoc Include="singleinstancecoordinator.h"/>
+    <QtMoc Include="traycontroller.h"/>
+    <QtMoc Include="downloadlistproxy.h"/>
     <ClInclude Include="domain.h"/>
+    <ClInclude Include="applicationprotocol.h"/>
+    <ClInclude Include="bandwidthlimiter.h"/>
+    <ClInclude Include="categoryrules.h"/>
+    <ClInclude Include="securecredentialstore.h"/>
+    <ClInclude Include="schedulewindow.h"/>
+    <QtMoc Include="diagnosticlogger.h"/>
     <ClInclude Include="persistencerepository.h"/>
+    <ClInclude Include="safefile.h"/>
     <QtMoc Include="downloadtask.h"/>
+    <QtMoc Include="segmenteddownloader.h"/>
     <QtMoc Include="downloadqueue.h"/>
     <QtRcc Include="qml.qrc"/>
     <None Include="main.qml"/>

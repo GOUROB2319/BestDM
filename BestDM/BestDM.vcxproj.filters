@@ -26,12 +26,96 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="applicationprotocol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="singleinstancecoordinator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="downloadmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="downloadlistproxy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="diagnosticlogger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="categoryrules.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="securecredentialstore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="traycontroller.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="schedulewindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bandwidthlimiter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <QtMoc Include="downloadmanager.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="singleinstancecoordinator.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="traycontroller.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="downloadlistproxy.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="domain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="applicationprotocol.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bandwidthlimiter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="categoryrules.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="securecredentialstore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="schedulewindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="persistencerepository.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="safefile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="diagnosticlogger.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="downloadtask.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="segmenteddownloader.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="downloadqueue.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClCompile Include="persistencerepository.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="downloadtask.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="segmenteddownloader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="downloadqueue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <QtRcc Include="qml.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
